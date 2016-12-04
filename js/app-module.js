@@ -9,6 +9,6 @@
    *
    */
 
-  angular.module('welcomeToSite', ['ngMaterial', 'ngMessages', 'ui.router', 'ngAnimate', 'home']);
+  angular.module('welcomeToSite', ['ngMaterial', 'ngMessages', 'ui.router', 'ngAnimate', 'home', 'ngGeolocation']);
 })();
 //# sourceMappingURL=app-module.js.map

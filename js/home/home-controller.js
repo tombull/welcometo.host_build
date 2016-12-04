@@ -5,13 +5,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 (function () {
   'use strict';
 
-  var HomeCtrl = function HomeCtrl($scope) {
+  var HomeCtrl = function HomeCtrl($scope, $geolocation) {
     'ngInject';
 
     _classCallCheck(this, HomeCtrl);
 
     var vm = this;
     vm.$scope = $scope;
+    vm.$geolocation = $geolocation;
+    vm.$geolocation.getCurrentPosition({
+      timeout: 60000
+    }).then(function (position) {
+      vm.$scope.myPosition = position;
+    });
   };
 
   /**
