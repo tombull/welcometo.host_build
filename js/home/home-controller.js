@@ -13,10 +13,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var vm = this;
     vm.$scope = $scope;
     vm.$geolocation = $geolocation;
+    vm.myPosition = 'Something';
     vm.$geolocation.getCurrentPosition({
       timeout: 60000
     }).then(function (position) {
-      vm.$scope.myPosition = position;
+      vm.myPosition = position;
     });
   };
 
